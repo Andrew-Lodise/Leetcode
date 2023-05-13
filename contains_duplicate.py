@@ -1,22 +1,38 @@
 from typing import List
 
-'''
+"""
 Given an integer array nums, 
 return true if any value appears at least twice in the array, 
 and return false if every element is distinct.
-'''
+"""
 
+# My solution
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-      dict = {}
-      for n in nums:
-        if n not in dict:
-          dict[n] = 1
-        else:
-          dict[n] += 1
+        # set a hash map to the occurances of each number
+        dict = {}
+        for n in nums:
+            if n not in dict:
+                dict[n] = 1
+            else:
+                dict[n] += 1
+            # use the any function to see if any occurances are more than one
+            return any(n > 1 for n in dict.values())
+        
+    def containsDuplicate2(self, nums: List[int]) -> bool:
+        # better than previous because it doesn't need to count at the end
+        dict = {}
+        for n in nums:
+            if n not in dict:
+                dict[n] = 1
+            else:
+                return True
+        return False
+        
+    def containsDuplicate3(self, nums: List[int]) -> bool:
+        # one liner useing a set and comparison in size
+        return len(set(nums))!=len(nums)
 
-      return (any(n>1 for n in dict.values()))
-    
 
 mysolution = Solution()
-print(mysolution.containsDuplicate([1,2,3,4,5,5]))
+print(mysolution.containsDuplicate2([1, 2, 3, 4, 5]))
