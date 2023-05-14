@@ -28,10 +28,22 @@ class Solution:
             else:
                 return True
         return False
-        
+    
+    # neetcode answer using a set/hashset
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        hashset = set()
+
+        for n in nums:
+            if n in hashset:
+                return True
+            hashset.add(n)
+        return False
+    
+    # one liner useing a set and comparison in size    
     def containsDuplicate3(self, nums: List[int]) -> bool:
-        # one liner useing a set and comparison in size
         return len(set(nums))!=len(nums)
+
+
 
 
 mysolution = Solution()
