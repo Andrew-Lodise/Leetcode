@@ -6,8 +6,9 @@ return true if any value appears at least twice in the array,
 and return false if every element is distinct.
 """
 
-# My solution
+
 class Solution:
+    # My solution | Time: O(n^2) Space: O(n)
     def containsDuplicate(self, nums: List[int]) -> bool:
         # set a hash map to the occurances of each number
         dict = {}
@@ -19,6 +20,7 @@ class Solution:
             # use the any function to see if any occurances are more than one
             return any(n > 1 for n in dict.values())
         
+    # Time: O(n) Space: O(n)
     def containsDuplicate2(self, nums: List[int]) -> bool:
         # better than previous because it doesn't need to count at the end
         dict = {}
@@ -29,7 +31,7 @@ class Solution:
                 return True
         return False
     
-    # neetcode answer using a set/hashset
+    # neetcode answer using a set/hashset | Time: O(n) Space: O(n)
     def containsDuplicate(self, nums: List[int]) -> bool:
         hashset = set()
 
