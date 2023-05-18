@@ -26,7 +26,7 @@ class Solution:
                 if (i != j) and nums[i] + nums[j] == target:
                     return [i, j]
     
-    # solution using a hashmap | Time complexity: O(n) Space complexity: O(n)
+    # neetcode solution using a hashmap | Time complexity: O(n) Space complexity: O(n)
     def twoSum2(self, nums: List[int], target: int) -> List[int]:
         dict = {}
 
@@ -35,7 +35,7 @@ class Solution:
             if remaining in dict:
                 return [i, dict[remaining]]
             
-            dict[n] = i
+            dict[n] = i     # stores numbers as number : index
     
 
     
@@ -43,6 +43,8 @@ class Solution:
 mysol = Solution()
 print(mysol.twoSum2([3,3], 6))
 
+
+# scrap notes
 l = [3,2,4,7]
 t = 6
 
