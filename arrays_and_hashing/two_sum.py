@@ -19,7 +19,7 @@ from typing import List
 
 
 class Solution:
-    # my solution using two loops | Time complexity: O(n^2) Space Complexity O(0)
+    # my solution using two loops | Time complexity: O(n^2) Space Complexity O(1)
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         for i in range(len(nums)):
             for j in range(len(nums)):

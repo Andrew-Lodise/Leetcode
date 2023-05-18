@@ -15,7 +15,7 @@ after each test
 
 
 class Solution:
-    # my solution using a list and for loops | Time: O(2n) Space: O(n)
+    # my solution using a list and for loops | Time: O(n) Space: O(n)
     def isPalindrome(self, s: str) -> bool:
         # Makes a list with only lowercase alphanumeric chars
         r = []
