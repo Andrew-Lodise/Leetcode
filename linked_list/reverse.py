@@ -10,11 +10,10 @@ class Solution:
         prev_node = None
         cur_node = head
         while cur_node:
-            nxt_node = cur_node.next 
-            cur_node.next = prev_node
-            prev_node = cur_node
-            #print("cur_node =", cur_node.val)
-            cur_node = nxt_node
+            nxt_node = cur_node.next    # storing the next node before chaning pointer
+            cur_node.next = prev_node   # changing current pointer to previous node
+            prev_node = cur_node        # iterating prev node
+            cur_node = nxt_node         # iterating cur node
 
         return prev_node
     
