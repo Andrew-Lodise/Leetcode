@@ -1,4 +1,4 @@
-'''
+''' Question
 Given an array of integers nums and an integer target,
  return indices of the two numbers such that they add up to target.
 
@@ -6,13 +6,6 @@ You may assume that each input would have exactly one solution,
  and you may not use the same element twice.
 
 You can return the answer in any order.
-'''
-
-'''
-Loop through the list an item at a time,
-if the number is less than the target
-and target - number is in the list,
-return indicies, otherwise go to next number
 '''
 
 from typing import List
@@ -38,29 +31,6 @@ class Solution:
             dict[n] = i     # stores numbers as number : index
     
 
-    
-
+#test    
 mysol = Solution()
 print(mysol.twoSum2([3,3], 6))
-
-
-# scrap notes
-l = [3,2,4,7]
-t = 6
-
-'''
-rl = []
-for i, n in enumerate(l):
-    if n < t and (t - n) in l:
-        rl.append(i)
-    
-print(rl)'''
-
-for i in range(len(l)):
-    for j in range(len(l)):
-        if i == j:
-            continue
-        
-        if l[i] + l[j] == t:
-            #print(l[i], l[j])
-            pass
